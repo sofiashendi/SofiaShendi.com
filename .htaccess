@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteRule ^services$ /services.php [L]
+RewriteRule ^clients-and-projects$ /clients_and_projects.php [L]
+RewriteRule ^writing$ /writing.php [L]
+RewriteRule ^media$ /media.php [L]
+
+Redirect 301 /web-developer http://www.sofiashendi.com/services
+Redirect 301 /content-creator http://www.sofiashendi.com/writing
+Redirect 301 /more http://www.sofiashendi.com
+Redirect 301 /reach-me http://www.sofiashendi.com
+
+ErrorDocument 404 /404.php

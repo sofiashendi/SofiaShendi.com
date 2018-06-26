@@ -1,0 +1,129 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+
+@colorLight: #FFFFFF;
+@colorDark: #333333;
+@colorHighlight: #1fd4a7;
+
+html 
+{
+	height: 100%;
+	min-height: 500px;
+} // html
+
+body 
+{
+	background: @colorLight;
+	font: 14px/22px 'Montserrat', Arial, sans-serif;
+	height: 100%;
+	min-height: 350px;
+	position: relative;
+	
+	h1
+	{
+		font-size: 20px;
+		line-height: 28px;
+	} // h1
+	
+	h2
+	{
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		margin-bottom: 20px;
+	} // h2
+	
+	h3
+	{
+		font-size: 1rem;
+		line-height: 1.2rem;
+		margin-bottom: 20px;
+	} // h3
+	
+	a
+	{
+		color: @colorDark;
+		transition: .2s all;
+		
+		&:hover
+		{
+			opacity: .4;
+		} // &:hover
+	} // a
+	
+	p
+	{
+		font-family: 'Raleway', sans-serif;
+		margin-bottom: 20px;
+	} // p
+	
+	ul
+	{
+		list-style: none;
+	} // ul
+	
+	main
+	{
+		@import "header";
+		
+		section#content
+		{
+			padding: 40px 0;
+			
+			& > h1
+			{
+				margin-bottom: 30px;
+				opacity: .6;
+			} // & > h1 
+			
+			& > section
+			{
+				h1
+				{
+					margin-bottom: 30px;
+				} // h1
+			} // & > section
+			
+			div#intro
+			{
+				padding: 40px;
+			} // div#intro
+			
+			section#listing
+			{
+				div.owl-carousel
+				{
+					article
+					{
+						position: relative;
+						
+						img
+						{
+							height: auto;
+							transition: .2s all;
+							width: 100%;
+						} // img
+						
+						div.details
+						{
+							padding: 40px;
+							
+							h3, p
+							{
+								margin-bottom: 0;
+							} // h3, p
+						} // div.details
+					} // article
+				} // div.listing
+			} // #listing
+		} // section#content 
+	
+	} // main
+	
+	@import "menu";
+	
+	@import "page_home.less";
+	@import "page_clients.less";
+	@import "page_services.less";
+} // body
